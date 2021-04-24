@@ -19,9 +19,11 @@
 {:else}
   <div>
     <h1>Total:</h1>
-    <p>Words: {totalWords}</p>
-    <p>Characters (with spaces): {totalChars}</p>
-    <p>Characters (without spaces): {totalCharsNoSpaces}</p>
+    <p>Words: <b>{totalWords}</b></p>
+    <p>Characters (with spaces): <b>{totalChars}</b></p>
+    <p>Characters (without spaces): <b>{totalCharsNoSpaces}</b></p>
+
+    <br />
 
     <button
       on:click={togglePageStats}>
