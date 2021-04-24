@@ -11,5 +11,6 @@
   <input
     type="submit"
     value="Parse"
+    disabled={!files}
     on:click|preventDefault={submit}>
 </form>
