@@ -1,27 +1,27 @@
 <script>
-	import Parser from './Parser.svelte';
+  import Parser from './Parser.svelte';
 
-	let pdfjs;
+  let pdfjs;
 
-	// called when PDF.js has finished loading
-	const init = () => {
-		pdfjs = window.pdfjsLib;
-	}
+  // called when PDF.js has finished loading
+  const init = () => {
+    pdfjs = window.pdfjsLib;
+  }
 </script>
 
 <svelte:head>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"
-		integrity="sha512-SG4yH2eYtAR5eK4/VL0bhqOsIb6AZSWAJjHOCmfhcaqTkDviJFoar/VYdG96iY7ouGhKQpAg3CMJ22BrZvhOUA=="
-		crossorigin="anonymous"
-		on:load={init}
-	></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"
+    integrity="sha512-SG4yH2eYtAR5eK4/VL0bhqOsIb6AZSWAJjHOCmfhcaqTkDviJFoar/VYdG96iY7ouGhKQpAg3CMJ22BrZvhOUA=="
+    crossorigin="anonymous"
+    on:load={init}
+  ></script>
 </svelte:head>
 
 <main>
-	{#if pdfjs}
-		<Parser pdfjs={pdfjs} />
-	{:else}
-		<p>loading...</p>
-	{/if}
+  {#if pdfjs}
+    <Parser pdfjs={pdfjs} />
+  {:else}
+    <p>loading...</p>
+  {/if}
 </main>

@@ -9,3 +9,9 @@ export const fileToBase64 = async (file) => {
     reader.readAsDataURL(file);
   });
 };
+
+/**
+ * Helper function to calculate a sum from an array
+ */
+export const sum = (arr, selector, initialValue = 0) =>
+  arr?.reduce((prev, curr) => prev + selector(curr), initialValue);
