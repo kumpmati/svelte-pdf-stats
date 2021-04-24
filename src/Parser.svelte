@@ -1,8 +1,8 @@
 <script>
   import FileHandler from "./FileHandler.svelte";
   import Visualizer from "./Visualizer/Visualizer.svelte";
-  import { parse } from "./stats";
-  import { fileToBase64 } from "./util";
+  import { parse } from "./js/stats";
+  import { fileToBase64 } from "./js/util";
 
   export let pdfjs;
   let stats;

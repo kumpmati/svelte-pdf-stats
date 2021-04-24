@@ -8,9 +8,33 @@
 
 <form>
   <input type="file" accept="application/pdf" bind:files>
-  <input
-    type="submit"
-    value="Parse"
-    disabled={!files}
-    on:click|preventDefault={submit}>
+  <div id="submit-wrapper" class:visible={!!files}>
+    <input
+      id="submit"
+      type="submit"
+      value="Parse"
+      disabled={!files}
+      on:click|preventDefault={submit}>
+  </div>
 </form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #submit-wrapper {
+    height: 0em;
+    transition: height 200ms;
+    overflow: hidden;
+  }
+
+  #submit-wrapper.visible {
+    height: 2.5em;
+  }
+
+  #submit {
+    width: 100%;
+  }
+</style>

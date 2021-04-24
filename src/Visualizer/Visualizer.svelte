@@ -1,6 +1,6 @@
 <script>
   import PageStats from "./PageStats.svelte";
-  import { sum } from "../util";
+  import { sum }from '../js/util';
 
   export let stats;
 
