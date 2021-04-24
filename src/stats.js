@@ -6,7 +6,7 @@ export const parse = async (pdf) => {
   const promises = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
-    const promise = calculateStatsForPage(await pdf.getPage(i), i);
+    const promise = calculateStatsForPage(await pdf.getPage(i));
     promises.push(promise);
   }
 
@@ -16,14 +16,14 @@ export const parse = async (pdf) => {
 /**
  * Gets the text content of a PDF page and returns its stats
  */
-const calculateStatsForPage = async (page, pageNum) => {
+const calculateStatsForPage = async (page) => {
   const textContent = await page.getTextContent();
 
   // turn text content into one long string
   const text = textContent.items.map((item) => item.str).join("");
 
   return {
-    pageNum,
+    pageNum: page.pageNumber,
     chars: calculateCharCounts(text),
     words: calculateWordCount(text),
   };
