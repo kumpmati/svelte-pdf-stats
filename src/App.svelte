@@ -1,4 +1,6 @@
 <script>
+	import Parser from './Parser.svelte';
+
 	let pdfjs;
 
 	// called when PDF.js has finished loading
@@ -18,7 +20,7 @@
 
 <main>
 	{#if pdfjs}
-		<h1>initialized</h1>
+		<Parser pdfjs={pdfjs} />
 	{:else}
 		<p>loading...</p>
 	{/if}
