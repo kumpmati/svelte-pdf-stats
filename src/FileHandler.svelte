@@ -35,7 +35,7 @@
   }
 
   #submit {
-    font-size: 1.25em;
+    font-size: 1.125em;
     width: 100%;
   }
 </style>

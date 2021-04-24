@@ -8,10 +8,3 @@
   <p>Characters: (with spaces): <b>{stats.chars.withSpaces}</b></p>
   <p>Characters: (without spaces): <b>{stats.chars.withoutSpaces}</b></p>
 </li>
-
-
-<style>
-  li {
-    list-style-type: none;
-  }
-</style>

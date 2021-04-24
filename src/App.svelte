@@ -50,8 +50,9 @@
   }
 
   h1 {
-    color: #ff3e00;
+    font-size: 2.75em;
     font-weight: 300;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
+    color: #ff3e00;
   }
 </style>

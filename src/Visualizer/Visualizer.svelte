@@ -1,6 +1,6 @@
 <script>
   import PageStats from "./PageStats.svelte";
-  import { sum }from '../js/util';
+  import { sum } from '../js/util';
 
   export let stats;
   let showPageStats = false;
@@ -14,9 +14,8 @@
   $: totalCharsNoSpaces = sum(stats, page => page.chars.withoutSpaces);
 </script>
 
-
 {#if !stats}
-  <p>No PDF loaded</p>
+  <p id="placeholder">No PDF loaded</p>
 {:else}
   <div>
     <h1>Total:</h1>
@@ -41,6 +40,11 @@
 {/if}
 
 <style>
+  #placeholder {
+    text-align: center;
+    color: gray;
+  }
+
   #page-stats {
     overflow: hidden;
     height: 0;
@@ -54,5 +58,6 @@
     margin: 0;
     padding: 0;
     padding-left: .5em;
+    list-style-type: none;
   }
 </style>
