@@ -15,7 +15,6 @@ export const parse = async (pdf) => {
 
 /**
  * Gets the text content of a PDF page and returns its stats
- * @param {*} page
  */
 const calculateStatsForPage = async (page, pageNum) => {
   const textContent = await page.getTextContent();
