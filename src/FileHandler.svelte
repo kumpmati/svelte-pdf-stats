@@ -7,7 +7,7 @@
 </script>
 
 <form>
-  <input type="file" bind:files>
+  <input type="file" accept="application/pdf" bind:files>
   <input
     type="submit"
     value="Parse"
