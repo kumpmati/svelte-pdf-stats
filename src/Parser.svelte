@@ -1,6 +1,6 @@
 <script>
   import FileHandler from "./FileHandler.svelte";
-  import Visualizer from "./Visualizer.svelte";
+  import Visualizer from "./Visualizer/Visualizer.svelte";
   import { parse } from "./stats";
   import { fileToBase64 } from "./util";
 
