@@ -17,10 +17,10 @@ export const parse = async (pdf) => {
  * Gets the text content of a PDF page and returns its stats
  */
 const calculateStatsForPage = async (page) => {
-  const textContent = await page.getTextContent();
+  const content = await page.getTextContent();
 
   // turn text content into one long string
-  const text = textContent.items.map((item) => item.str).join("");
+  const text = content.items.map((item) => item.str).join("");
 
   return {
     pageNum: page.pageNumber,
