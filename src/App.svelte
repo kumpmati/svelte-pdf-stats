@@ -19,7 +19,7 @@
 </svelte:head>
 
 <main>
-  <h1>SVELTE PDF ANALYZER</h1>
+  <h1>SVELTE PDF STATS</h1>
 
   {#if pdfjs}
     <Parser pdfjs={pdfjs} />
