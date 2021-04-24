@@ -19,7 +19,7 @@
 </svelte:head>
 
 <main>
-  <h1>Fancy PDF word count</h1>
+  <h1>SVELTE PDF ANALYZER</h1>
 
   {#if pdfjs}
     <Parser pdfjs={pdfjs} />
@@ -32,16 +32,16 @@
 <style>
   :global(body) {
     background-color: rgb(245,245,245);
+    height: max-content;
   }
 
   main {
     position: relative;
-    top: 5em;
 
-    margin: 0 auto;
-    width: max-content;
-
+    margin: 5em auto;
     padding: 2em 3em;
+
+    width: max-content;
 
     border-radius: .25em;
 
@@ -50,7 +50,8 @@
   }
 
   h1 {
-    color: rgb(50, 119, 151);
+    color: #ff3e00;
+    font-weight: 300;
     margin-bottom: 1.5em;
   }
 </style>

@@ -31,10 +31,11 @@
   }
 
   #submit-wrapper.visible {
-    height: 2.5em;
+    height: 3em;
   }
 
   #submit {
+    font-size: 1.25em;
     width: 100%;
   }
 </style>
